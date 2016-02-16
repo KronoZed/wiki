@@ -1,5 +1,5 @@
 title: gentoo-overlay
-category: My projects
+category: My Projects
 ---
 
 #### Установка
