@@ -14,7 +14,7 @@ layman -f -o https://raw.githubusercontent.com/KronoZed/gentoo-overlay/master/re
 
 Вариант 2:
 
-Чтобы добавить его в список layman`a, откройте /etc/layman/layman.cfg и сразу после строки:
+Чтобы добавить его в список layman`a, откройте **/etc/layman/layman.cfg** и сразу после строки:
 
 ```
 overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
