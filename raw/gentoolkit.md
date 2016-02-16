@@ -1,5 +1,5 @@
 title: gentoolkit
-category: Gentoo Linux
+category: Генту Линукс
 ---
 #### Введение
 
