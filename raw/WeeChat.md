@@ -4,7 +4,7 @@ category: Связанное с десктопом
 
 #### weechat.conf
 
-[startup]
+#### [startup]
 
 ```
 command_after_plugins = ""
@@ -14,10 +14,9 @@ display_version = on
 sys_rlimit = ""
 ```
 
-[look]
+#### [look]
 
 ```
-[look]
 align_end_of_lines = message
 bar_more_down = "++"
 bar_more_left = "<<"
@@ -130,7 +129,7 @@ word_chars_highlight = "!\u00A0,-,_,|,alnum"
 word_chars_input = "!\u00A0,-,_,|,alnum"
 ```
 
-[color]
+#### [color]
 
 ```
 bar_more = lightmagenta
@@ -198,7 +197,7 @@ status_number = yellow
 status_time = default
 ```
 
-[completion]
+#### [completion]
 
 ```
 base_word_until_cursor = on
@@ -215,7 +214,7 @@ partial_completion_count = on
 partial_completion_other = off
 ```
 
-[history]
+#### [history]
 
 ```
 display_default = 5
@@ -225,7 +224,7 @@ max_commands = 100
 max_visited_buffers = 50
 ```
 
-[network]
+#### [network]
 
 ```
 connection_timeout = 60
@@ -234,7 +233,7 @@ gnutls_handshake_timeout = 30
 proxy_curl = ""
 ```
 
-[bar]
+#### [bar]
 
 ```
 buddylist.color_bg = default
@@ -407,7 +406,7 @@ window_popup_menu.size_max = 0
 window_popup_menu.type = window
 ```
 
-[filter]
+#### [filter]
 
 ```
 irc_smart = on;*;irc_smart_filter;*
