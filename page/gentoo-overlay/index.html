@@ -7,7 +7,7 @@
     <meta name="author" content="KronoZ">
     <meta name="description" content="My personal wiki">
     <title>
-                gentoolkit - KronoZ&#39;s wiki            </title>
+                gentoo-overlay - KronoZ&#39;s wiki            </title>
     <link href="/assets/bootstrap.min.css" rel="stylesheet"/>
     <link href="/assets/style.css" rel="stylesheet"/>
     <script src="/assets/highlight.min.js"></script>
@@ -17,7 +17,7 @@
 <div class="container">
     <div class="page-header">
                 <h1><a href="/" class="logo-text" target="_self">KronoZ&#39;s wiki</a>&nbsp;
-                        <small>/ gentoolkit</small>
+                        <small>/ gentoo-overlay</small>
                     </h1>
             </div>
 <div class="row">
@@ -59,14 +59,45 @@
 <div class="col-lg-9 col-md-9 col-sm-12">
 <div class="index-content">
 <div class="row">
-<span class="label label-primary pull-right">Gentoo Linux</span>
+<span class="label label-primary pull-right">My projects</span>
 </div>
 <div class="row">
-<h4><a href="#Введение" name="Введение" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Введение</h4>
-<pre><code>test code
-
+<p>e: gentoo-overlay
+category: My projects</p>
+<h4><a href="#Установка" name="Установка" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Установка</h4>
+<p>Вариант 1:
+Выполните:</p>
+<pre><code>layman -f -o https://raw.githubusercontent.com/KronoZed/gentoo-overlay/master/repositories.xml -a kronoz
 </code></pre>
-<p><em>Last Update: Tue Feb 16 2016 06:50:29 GMT+0300 (MSK)</em>  <a href="/raw/gentoolkit.md">Source File</a></p>
+<p>Вариант 2:
+Чтобы добавить его в список layman`a, откройте /etc/layman/layman.cfg и сразу после строки:</p>
+<pre><code>overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
+</code></pre>
+<p>Добавьте:</p>
+<pre><code>https://raw.githubusercontent.com/KronoZed/gentoo-overlay/master/repositories.xml
+</code></pre>
+<p>Должно получиться так:</p>
+<pre><code>overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
+https://raw.githubusercontent.com/KronoZed/gentoo-overlay/master/repositories.xml
+</code></pre>
+<p>После этого выполните:</p>
+<pre><code>layman -L
+layman -a kronoz
+</code></pre>
+<h4><a href="#Пакеты_(стабильные)" name="Пакеты_(стабильные)" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Пакеты (стабильные)</h4>
+<ul>
+<li>dev-python/aiodns (1.0.1)</li>
+<li>dev-python/pycares (1.0.0)</li>
+<li>dev-python/slixmpp (9999)</li>
+<li>games-fps/urbanterror-maps (20160214)</li>
+<li>games-util/urtconnector (9999)</li>
+<li>net-im/poezio (9999)</li>
+</ul>
+<h4><a href="#Пакеты_(тестовые)" name="Пакеты_(тестовые)" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Пакеты (тестовые)</h4>
+<ul>
+<li>games-util/urtdsc (9999)</li>
+</ul>
+<p><em>Last Update: Tue Feb 16 2016 07:11:47 GMT+0300 (MSK)</em>  <a href="/raw/gentoo-overlay.md">Source File</a></p>
 </div>
 <div class="row">
 </div>
