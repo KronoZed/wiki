@@ -1,7 +1,7 @@
 title: URxvt
-category: Desktop Related
+category: Связанное с десктопом
 ---
-#### My Configuration
+#### Моя конфигурация
 
 ```
 ! включить расширения на perl: основные, парсер регулярных выражений (для подсветки URL)
