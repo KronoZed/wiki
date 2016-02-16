@@ -26,42 +26,6 @@ chat_highlight_bg = default
 chat_nick_colors = "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue,31,35,38,40,49,63,70,80,92,99,112,126,130,138,142,148,160,162,167,169,174,176,178,184,186,210,212,215,247"
 ```
 
-#### [completion]
-
-```
-base_word_until_cursor = on
-command_inline = on
-default_template = "%(nicks)|%(irc_channels)"
-nick_add_space = on
-nick_completer = ":"
-nick_first_only = off
-nick_ignore_chars = "[]`_-^"
-partial_completion_alert = on
-partial_completion_command = off
-partial_completion_command_arg = off
-partial_completion_count = on
-partial_completion_other = off
-```
-
-#### [history]
-
-```
-display_default = 5
-max_buffer_lines_minutes = 0
-max_buffer_lines_number = 4096
-max_commands = 100
-max_visited_buffers = 50
-```
-
-#### [network]
-
-```
-connection_timeout = 60
-gnutls_ca_file = "/etc/ssl/certs/ca-certificates.crt"
-gnutls_handshake_timeout = 30
-proxy_curl = ""
-```
-
 #### [bar]
 
 ```
