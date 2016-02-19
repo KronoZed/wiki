@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="KronoZ">
+    <meta name="description" content="Моя персональная вики">
+    <title>
+                scrot - KronoZ&#39;s wiki            </title>
+    <link href="/assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/assets/style.css" rel="stylesheet"/>
+    <script src="/assets/highlight.min.js"></script>
+    <base target="_blank">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+                <h1><a href="/" class="logo-text" target="_self">KronoZ&#39;s wiki</a>&nbsp;
+                        <small>/ scrot</small>
+                    </h1>
+            </div>
+<div class="row">
+<!-- two columns -->
+<div class="col-lg-3 col-md-3">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Обо мне</h3>
+    </div>
+    <div class="panel-body">
+        <p>Author: <b>KronoZ</b></p>
+        <p>ICQ: 847000</p>
+        <p>E-mail: root@kronoz.guru</p>
+        <p>Jabber/XMPP: root@kronoz.guru</p>
+        <p>IRC: #KronoZ @ FreeNode/QuakeNet</p>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Navigation</h3>
+    </div>
+    <div class="panel-body">
+        <h6><a href="/" target="_self">Homepage</a></h6>
+                <h5>Связанное с десктопом</h5>
+        <ul class="list-unstyled">
+                        <li>
+                <a href="/page/Scrot/" target="_self">
+                                        scrot                                    </a>
+            </li>
+                        <li>
+                <a href="/page/URxvt/" target="_self">
+                                        URxvt                                    </a>
+            </li>
+                    </ul>
+                <h5>Мои проекты</h5>
+        <ul class="list-unstyled">
+                        <li>
+                <a href="/page/gentoo-overlay/" target="_self">
+                                        gentoo-overlay                                    </a>
+            </li>
+                    </ul>
+                        <a href="/changelog/">Changelog</a>
+            </div>
+</div>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-12">
+<div class="index-content">
+<div class="row">
+<span class="label label-primary pull-right">Связанное с десктопом</span>
+</div>
+<div class="row">
+<h2><a href="#scrot_-_утилита_командной_строки_для_снятия_скриншотов." name="scrot_-_утилита_командной_строки_для_снятия_скриншотов." target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;scrot - утилита командной строки для снятия скриншотов.</h2>
+<h4><a href="#сделать_скриншот_в_текущей_директории_с_именем,_которое_по_умолчанию_имеет_формат_date-time_resolution_scrot.png" name="сделать_скриншот_в_текущей_директории_с_именем,_которое_по_умолчанию_имеет_формат_date-time_resolution_scrot.png" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;сделать скриншот в текущей директории с именем, которое по умолчанию имеет формат date-time_resolution_scrot.png</h4>
+<pre><code>scrot
+</code></pre>
+<h4><a href="#этот_параметр_заснимет_ещё_и_обрамление_окна:" name="этот_параметр_заснимет_ещё_и_обрамление_окна:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;этот параметр заснимет ещё и обрамление окна:</h4>
+<pre><code>-b, --border
+</code></pre>
+<h4><a href="#количество_секунд,_через_которое_будет_сделан_снимок:" name="количество_секунд,_через_которое_будет_сделан_снимок:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;количество секунд, через которое будет сделан снимок:</h4>
+<pre><code>-d, --delay NUM
+</code></pre>
+<h4><a href="#отображение_обратного_отсчёта." name="отображение_обратного_отсчёта." target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;отображение обратного отсчёта.</h4>
+<pre><code>-c, --count
+</code></pre>
+<h4><a href="#этот_параметр_позволяет_выполнить_дополнительную_команду:" name="этот_параметр_позволяет_выполнить_дополнительную_команду:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;этот параметр позволяет выполнить дополнительную команду:</h4>
+<pre><code>-e, --exec APP
+</code></pre>
+<h4><a href="#возможность_регулировки_качества_изображения._Диапазон_от_1_до_100._По-умолчанию_75:" name="возможность_регулировки_качества_изображения._Диапазон_от_1_до_100._По-умолчанию_75:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;возможность регулировки качества изображения. Диапазон от 1 до 100. По-умолчанию 75:</h4>
+<pre><code>-q, --quality NUM
+</code></pre>
+<h4><a href="#этот_параметр_позволяет_сделать_снимок_нужного_окна_просто_кликнув_мышкой_на_нём:" name="этот_параметр_позволяет_сделать_снимок_нужного_окна_просто_кликнув_мышкой_на_нём:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;этот параметр позволяет сделать снимок нужного окна просто кликнув мышкой на нём:</h4>
+<pre><code>-s, --select
+</code></pre>
+<h4><a href="#этот_параметр_позволяет_сделать_снимок_активного_окна:" name="этот_параметр_позволяет_сделать_снимок_активного_окна:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;этот параметр позволяет сделать снимок активного окна:</h4>
+<pre><code>-u, --focused
+</code></pre>
+<h4><a href="#этот_параметр_позволяет_сделать_миниатюру_вместе_со_снимком_экрана._В_качестве_значения_NUM_принимается_число._Расчет_производится_в_процентах_от_оригинального_размера:" name="этот_параметр_позволяет_сделать_миниатюру_вместе_со_снимком_экрана._В_качестве_значения_NUM_принимается_число._Расчет_производится_в_процентах_от_оригинального_размера:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;этот параметр позволяет сделать миниатюру вместе со снимком экрана. В качестве значения NUM принимается число. Расчет производится в процентах от оригинального размера:</h4>
+<pre><code>-t, --thumb NUM
+</code></pre>
+<h4><a href="#специальные_значения_можно_использовать_для_подстановки_значений_в_параметр_--exec_или_имя_файла:" name="специальные_значения_можно_использовать_для_подстановки_значений_в_параметр_--exec_или_имя_файла:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;специальные значения можно использовать для подстановки значений в параметр --exec или имя файла:</h4>
+<pre><code>* $f — путь/имя изображения (игнорируется, если используется в имени файла)
+* $m — путь/имя эскиза
+* $n — имя изображения (игнорируется, если используется в имени файла)
+* $s — размер изображения (в байтах) (игнорируется, если используется в имени файла)
+* $p — размер изображения в пикселях
+* $w — ширина изображения
+* $h — высота изображения
+* $t — формат изображения
+* $$ — выводит символ '$'
+* \n — перевод строки (игнорируется, если используется в имени файла)
+</code></pre>
+<h4><a href="#перенос_снимка_в_другую_директорию:" name="перенос_снимка_в_другую_директорию:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;перенос снимка в другую директорию:</h4>
+<pre><code>scrot '%Y-%m-%d_%H%M%S_$wx$h.png' -e 'mv $f ~/screenshots/'
+</code></pre>
+<h4><a href="#вывод_оповещения:" name="вывод_оповещения:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;вывод оповещения:</h4>
+<pre><code>scrot '%Y-%m-%d_%H%M%S_$wx$h.png' -e 'mv $f ~/screenshots/ &amp;&amp; notify-send &quot;Скриншот сделан и перенесён в папку ~/screenshots/&quot;'
+</code></pre>
+<h4><a href="#скрипт_автоснимков:" name="скрипт_автоснимков:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;скрипт автоснимков:</h4>
+<pre><code>#!/bin/bash
+while true;
+do
+scrot -d 5 -q 50 '%Y-%m-%d_%H:%M:%S.jpg' -e 'mv $f ~/screenshots/';
+done
+</code></pre>
+<p><em>Last Update: Fri Feb 19 2016 16:57:20 GMT+0300 (MSK)</em>  <a href="/raw/Scrot.md">Source File</a></p>
+</div>
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <div class="footer-text">
+        <p>
+            KronoZ&#39;s wiki using <a href="https://github.com/phoenixlzx/MinoriWiki" target="_blank">MinoriWiki</a>
+        </p>
+    </div>
+</div>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
