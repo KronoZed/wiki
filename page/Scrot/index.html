@@ -111,19 +111,55 @@
 <li>\n — перевод строки (игнорируется, если используется в имени файла)</li>
 </ul>
 <h5><a href="#перенос_снимка_в_другую_директорию:" name="перенос_снимка_в_другую_директорию:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;перенос снимка в другую директорию:</h5>
-<pre><code>scrot '%Y-%m-%d_%H%M%S_$wx$h.png' -e 'mv $f ~/screenshots/'
+<pre><code>scrot '%Y-%m-%d_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Картинки/screenshots/'
 </code></pre>
 <h5><a href="#вывод_оповещения:" name="вывод_оповещения:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;вывод оповещения:</h5>
-<pre><code>scrot '%Y-%m-%d_%H%M%S_$wx$h.png' -e 'mv $f ~/screenshots/ &amp;&amp; notify-send &quot;Скриншот сделан и перенесён в папку ~/screenshots/&quot;'
+<pre><code>scrot '%Y-%m-%d_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Картинки/screenshots/ &amp;&amp; notify-send &quot;Скриншот сделан и перенесён в папку ~/Картинки/screenshots/&quot;'
+</code></pre>
+<h5><a href="#выбор_окна:" name="выбор_окна:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;выбор окна:</h5>
+<pre><code>#!/bin/sh
+sleep 0.2 ; scrot -s '%Y-%m-%d_at_%I:%M:%S_$wx$h.png' -e 'mv $f ~/Картинки/screenshots &amp;&amp; notify-send &quot;Скриншот сделан и перенесён в папку ~/Картинки/screenshots/&quot;'
 </code></pre>
 <h5><a href="#скрипт_автоснимков:" name="скрипт_автоснимков:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;скрипт автоснимков:</h5>
 <pre><code>#!/bin/bash
 while true;
 do
-scrot -d 5 -q 50 '%Y-%m-%d_%H:%M:%S.jpg' -e 'mv $f ~/screenshots/';
+scrot -d 5 -q 50 '%Y-%m-%d_%H-%M-%S.jpg' -e 'mv $f ~/Картинки/screenshots/';
 done
 </code></pre>
-<p><em>Last Update: Fri Feb 19 2016 17:43:38 GMT+0300 (MSK)</em>  <a href="/raw/Scrot.md">Source File</a></p>
+<h5><a href="#скрипт_заливки_скриншота_на_удалённый_примонтированный_раздел:" name="скрипт_заливки_скриншота_на_удалённый_примонтированный_раздел:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;скрипт заливки скриншота на удалённый примонтированный раздел:</h5>
+<pre><code>#!/bin/bash
+
+if [[ -n &quot;$*&quot; ]]; then
+    FILENAME=&quot;$*&quot;
+else
+    FILENAME=&quot;$(date +'%Y-%m-%d_at_%H-%M-%S')_$HOSTNAME.png&quot;
+fi
+
+scrot -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME}
+URI=&quot;http://root.kronoz.guru/screenshots/${FILENAME}&quot;
+echo -n $URI | tee &gt;(xclip) &amp;&amp; echo
+notify-send &quot;Скриншот сделан и загружен на сервер root.kronoz.guru&quot;
+chromium http://root.kronoz.guru/screenshots/${FILENAME}
+exit
+</code></pre>
+<h5><a href="#скрипт_выбора_окна_и_заливки_скриншота_на_удалённый_примонтированный_раздел:" name="скрипт_выбора_окна_и_заливки_скриншота_на_удалённый_примонтированный_раздел:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;скрипт выбора окна и заливки скриншота на удалённый примонтированный раздел:</h5>
+<pre><code>#!/bin/bash
+
+if [[ -n &quot;$*&quot; ]]; then
+    FILENAME=&quot;$*&quot;
+else
+    FILENAME=&quot;$(date +'%Y-%m-%d_at_%H-%M-%S')_$HOSTNAME.png&quot;
+fi
+
+sleep 0.2 ; scrot -s -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME}
+URI=&quot;http://root.kronoz.guru/screenshots/${FILENAME}&quot;
+echo -n $URI | tee &gt;(xclip) &amp;&amp; echo
+notify-send &quot;Скриншот сделан и загружен на сервер root.kronoz.guru&quot;
+chromium http://root.kronoz.guru/screenshots/${FILENAME}
+exit
+</code></pre>
+<p><em>Last Update: Mon Feb 22 2016 05:53:16 GMT+0300 (MSK)</em>  <a href="/raw/Scrot.md">Source File</a></p>
 </div>
 <div class="row">
 </div>

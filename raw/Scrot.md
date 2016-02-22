@@ -62,12 +62,18 @@ scrot
 
 ##### перенос снимка в другую директорию:
 ```
-scrot '%Y-%m-%d_%H%M%S_$wx$h.png' -e 'mv $f ~/screenshots/'
+scrot '%Y-%m-%d_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Картинки/screenshots/'
 ```
 
 ##### вывод оповещения:
 ```
-scrot '%Y-%m-%d_%H%M%S_$wx$h.png' -e 'mv $f ~/screenshots/ && notify-send "Скриншот сделан и перенесён в папку ~/screenshots/"'
+scrot '%Y-%m-%d_%H-%M-%S_$wx$h.png' -e 'mv $f ~/Картинки/screenshots/ && notify-send "Скриншот сделан и перенесён в папку ~/Картинки/screenshots/"'
+```
+
+##### выбор окна:
+```
+#!/bin/sh
+sleep 0.2 ; scrot -s '%Y-%m-%d_at_%I:%M:%S_$wx$h.png' -e 'mv $f ~/Картинки/screenshots && notify-send "Скриншот сделан и перенесён в папку ~/Картинки/screenshots/"'
 ```
 
 ##### скрипт автоснимков:
@@ -75,6 +81,41 @@ scrot '%Y-%m-%d_%H%M%S_$wx$h.png' -e 'mv $f ~/screenshots/ && notify-send "Ск�
 #!/bin/bash
 while true;
 do
-scrot -d 5 -q 50 '%Y-%m-%d_%H:%M:%S.jpg' -e 'mv $f ~/screenshots/';
+scrot -d 5 -q 50 '%Y-%m-%d_%H-%M-%S.jpg' -e 'mv $f ~/Картинки/screenshots/';
 done
+```
+
+##### скрипт заливки скриншота на удалённый примонтированный раздел:
+```
+#!/bin/bash
+
+if [[ -n "$*" ]]; then
+    FILENAME="$*"
+else
+    FILENAME="$(date +'%Y-%m-%d_at_%H-%M-%S')_$HOSTNAME.png"
+fi
+
+scrot -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME}
+URI="http://root.kronoz.guru/screenshots/${FILENAME}"
+echo -n $URI | tee >(xclip) && echo
+notify-send "Скриншот сделан и загружен на сервер root.kronoz.guru"
+chromium http://root.kronoz.guru/screenshots/${FILENAME}
+exit
+```
+##### скрипт выбора окна и заливки скриншота на удалённый примонтированный раздел:
+```
+#!/bin/bash
+
+if [[ -n "$*" ]]; then
+    FILENAME="$*"
+else
+    FILENAME="$(date +'%Y-%m-%d_at_%H-%M-%S')_$HOSTNAME.png"
+fi
+
+sleep 0.2 ; scrot -s -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME}
+URI="http://root.kronoz.guru/screenshots/${FILENAME}"
+echo -n $URI | tee >(xclip) && echo
+notify-send "Скриншот сделан и загружен на сервер root.kronoz.guru"
+chromium http://root.kronoz.guru/screenshots/${FILENAME}
+exit
 ```
