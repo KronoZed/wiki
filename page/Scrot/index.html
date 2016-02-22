@@ -136,11 +136,17 @@ else
     FILENAME=&quot;$(date +'%Y-%m-%d_at_%H-%M-%S')_$HOSTNAME.png&quot;
 fi
 
-scrot -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME}
-URI=&quot;http://root.kronoz.guru/screenshots/${FILENAME}&quot;
-echo -n $URI | tee &gt;(xclip) &amp;&amp; echo
-notify-send &quot;Скриншот сделан и загружен на сервер root.kronoz.guru&quot;
-chromium http://root.kronoz.guru/screenshots/${FILENAME}
+if  scrot -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME} ; then
+    notify-send -u low -t 1500 &quot;Скриншот ${FILENAME} сделан и загружен на сервер root.kronoz.guru&quot;
+
+    URI=&quot;http://root.kronoz.guru/screenshots/${FILENAME}&quot;
+    echo -n $URI | tee &gt;(xclip) &amp;&amp; echo
+
+    chromium http://root.kronoz.guru/screenshots/${FILENAME}
+else
+    notify-send -u critical -t 3000 &quot;Не удалось сделать скриншот&quot;
+fi
+
 exit
 </code></pre>
 <h5><a href="#скрипт_выбора_окна_и_заливки_скриншота_на_удалённый_примонтированный_раздел:" name="скрипт_выбора_окна_и_заливки_скриншота_на_удалённый_примонтированный_раздел:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;скрипт выбора окна и заливки скриншота на удалённый примонтированный раздел:</h5>
@@ -152,14 +158,20 @@ else
     FILENAME=&quot;$(date +'%Y-%m-%d_at_%H-%M-%S')_$HOSTNAME.png&quot;
 fi
 
-sleep 0.2 ; scrot -s -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME}
-URI=&quot;http://root.kronoz.guru/screenshots/${FILENAME}&quot;
-echo -n $URI | tee &gt;(xclip) &amp;&amp; echo
-notify-send &quot;Скриншот сделан и загружен на сервер root.kronoz.guru&quot;
-chromium http://root.kronoz.guru/screenshots/${FILENAME}
+if  sleep 0.2 ; scrot -s -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME} ; then
+    notify-send -u low -t 1500 &quot;Скриншот ${FILENAME} сделан и загружен на сервер root.kronoz.guru&quot;
+
+    URI=&quot;http://root.kronoz.guru/screenshots/${FILENAME}&quot;
+    echo -n $URI | tee &gt;(xclip) &amp;&amp; echo
+
+    chromium http://root.kronoz.guru/screenshots/${FILENAME}
+else
+    notify-send -u critical -t 3000 &quot;Не удалось сделать скриншот&quot;
+fi
+
 exit
 </code></pre>
-<p><em>Last Update: Mon Feb 22 2016 05:53:16 GMT+0300 (MSK)</em>  <a href="/raw/Scrot.md">Source File</a></p>
+<p><em>Last Update: Mon Feb 22 2016 22:21:39 GMT+0300 (MSK)</em>  <a href="/raw/Scrot.md">Source File</a></p>
 </div>
 <div class="row">
 </div>
