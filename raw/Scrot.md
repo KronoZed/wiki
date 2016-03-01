@@ -85,7 +85,7 @@ scrot -d 5 -q 50 '%Y-%m-%d_%H-%M-%S.jpg' -e 'mv $f ~/Картинки/screenshot
 done
 ```
 
-##### скрипт заливки скриншота на удалённый примонтированный раздел:
+##### скрипт заливки скриншота на удалённый сервер:
 ```
 #!/bin/bash
 
@@ -95,7 +95,7 @@ else
     FILENAME="$(date +'%Y-%m-%d_at_%H-%M-%S')_$HOSTNAME.png"
 fi
 
-if  scrot -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME} ; then
+if  scrot -q 100 ~/Картинки/screenshots/${FILENAME} -e 'scp -i ~/.ssh/id_rsa.shot.pub $f kronoz@root.kronoz.guru:/home/kronoz/web/sites/root.kronoz.guru/public/screenshots/' ; then
     notify-send -u low -t 1500 "Скриншот ${FILENAME} сделан и загружен на сервер root.kronoz.guru"
 
     URI="http://root.kronoz.guru/screenshots/${FILENAME}"
@@ -108,7 +108,7 @@ fi
 
 exit
 ```
-##### скрипт выбора окна и заливки скриншота на удалённый примонтированный раздел:
+##### скрипт выбора окна и заливки скриншота на удалённый сервер:
 ```
 #!/bin/bash
 
@@ -118,7 +118,7 @@ else
     FILENAME="$(date +'%Y-%m-%d_at_%H-%M-%S')_$HOSTNAME.png"
 fi
 
-if  sleep 0.2 ; scrot -s -q 100 ~/share/root.kronoz.guru/screenshots/${FILENAME} ; then
+if  sleep 0.2 ; scrot -s -q 100 ~/Картинки/screenshots/${FILENAME} -e 'scp -i ~/.ssh/id_rsa.shot.pub $f kronoz@root.kronoz.guru:/home/kronoz/web/sites/root.kronoz.guru/public/screenshots/' ; then
     notify-send -u low -t 1500 "Скриншот ${FILENAME} сделан и загружен на сервер root.kronoz.guru"
 
     URI="http://root.kronoz.guru/screenshots/${FILENAME}"
