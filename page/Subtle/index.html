@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="KronoZ">
+    <meta name="description" content="Моя персональная вики">
+    <title>
+                Subtle - KronoZ&#39;s wiki            </title>
+    <link href="/assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/assets/style.css" rel="stylesheet"/>
+    <script src="/assets/highlight.min.js"></script>
+    <base target="_blank">
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+                <h1><a href="/" class="logo-text" target="_self">KronoZ&#39;s wiki</a>&nbsp;
+                        <small>/ Subtle</small>
+                    </h1>
+            </div>
+<div class="row">
+<!-- two columns -->
+<div class="col-lg-3 col-md-3">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Обо мне</h3>
+    </div>
+    <div class="panel-body">
+        <p>Author: <b>KronoZ</b></p>
+        <p>ICQ: 847000</p>
+        <p>E-mail: root@kronoz.guru</p>
+        <p>Jabber/XMPP: root@kronoz.guru</p>
+        <p>IRC: #KronoZ @ FreeNode/QuakeNet</p>
+    </div>
+</div>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title">Навигация</h3>
+    </div>
+    <div class="panel-body">
+        <h6><a href="/" target="_self">Домашняя страница</a></h6>
+                <h5>Связанное с десктопом</h5>
+        <ul class="list-unstyled">
+                        <li>
+                <a href="/page/Scrot/" target="_self">
+                                        Scrot                                    </a>
+            </li>
+                        <li>
+                <a href="/page/Subtle/" target="_self">
+                                        Subtle                                    </a>
+            </li>
+                        <li>
+                <a href="/page/URxvt/" target="_self">
+                                        URxvt                                    </a>
+            </li>
+                    </ul>
+                <h5>Мои проекты</h5>
+        <ul class="list-unstyled">
+                        <li>
+                <a href="/page/gentoo-overlay/" target="_self">
+                                        gentoo-overlay                                    </a>
+            </li>
+                    </ul>
+                        <a href="/changelog/">Список изменений</a>
+            </div>
+</div>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-12">
+<div class="index-content">
+<div class="row">
+<span class="label label-primary pull-right">Связанное с десктопом</span>
+</div>
+<div class="row">
+<h3><a href="#Subtle_-_статический_фреймовый_оконный_менеджер." name="Subtle_-_статический_фреймовый_оконный_менеджер." target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Subtle - статический фреймовый оконный менеджер.</h3>
+<h5><a href="#Эти_элементы_доступны_для_панелей:" name="Эти_элементы_доступны_для_панелей:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Эти элементы доступны для панелей:</h5>
+<pre><code>:views     - Отобразит список тегов
+:title     - Ответственен за включение/выключение названия текущего окна
+:tray      - Показывать ли трей приложений
+:keychain  - Display current chain (Can be used only once)
+:sublets   - Отобразить все имеющиеся саблеты
+:sublet    - Отобразить только некоторый саблет, требуется указать их имена
+:spacer    - Влияет на местоположение элемента
+:center    - Центрирует элемент панели
+:separator - Показывать разделитель между элементами
+icon       - Показывать иконку между элементами
+</code></pre>
+<h5><a href="#Готовый_пример_панели:" name="Готовый_пример_панели:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Готовый пример панели:</h5>
+<pre><code>screen 1 do
+  top     [ :views, :separator, :title, :spacer, :tray, :seperator, :clock2 ]
+end
+</code></pre>
+<h5><a href="#Эти_свойства_доступны_для_большинства_стилей:" name="Эти_свойства_доступны_для_большинства_стилей:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Эти свойства доступны для большинства стилей:</h5>
+<pre><code>foreground - Цвет текста переднего плана
+background - Фоновый цвет
+font       - Шрифт строки (xftontsel или xft)
+margin     - Внешнее расстояние
+border     - Цвет и размер границы
+padding    - Внутренний интервал
+active     - Цвет активного клиента
+icon       - Цвет иконки
+inactive   - Цвет неактивного клиента
+panel      - Цвет панели
+separator  - Цвет сепаратора
+stripple   - This property sets the color of the panel stippling if any
+width      - This property sets the string length in character, default is 50 characters
+min_width  - This property sets the min. pixel width of a panel item
+</code></pre>
+<h5><a href="#Кнопки_мыши" name="Кнопки_мыши" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Кнопки мыши</h5>
+<pre><code>B1 = Button1 (Левая кнопка мыши)
+B2 = Button2 (Средняя кнопка мыши)
+B3 = Button3 (Правая кнопка мыши)
+B4 = Button4 (Колесо мыши вверх)
+B5 = Button5 (Колесо мыши вниз)
+</code></pre>
+<h5><a href="#Специальные_клавиши-модификаторы:" name="Специальные_клавиши-модификаторы:" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Специальные клавиши-модификаторы:</h5>
+<pre><code>[*A*] = левый Alt (Mod1)
+[*C*] = Control key
+[*M*] = Meta key (Mod3)
+[*S*] = Shift key
+[*W*] = Super/Windows key (Mod4)
+[*G*] = AltGr key (Mod5)
+</code></pre>
+<h5><a href="#Общие_клавиши" name="Общие_клавиши" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Общие клавиши</h5>
+<pre><code>Space
+Tab
+Enter / Return
+F1 - F12
+Left, Down, Up, Right
+Next, Prior
+Page_Up, Page_Down
+Home, End
+Insert, Delete
+Add, Subtract, Multiply, Divide, Equal
+Decimal
+Num_Lock
+Escape
+</code></pre>
+<h5><a href="#Мультимедийные_клавиши" name="Мультимедийные_клавиши" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Мультимедийные клавиши</h5>
+<pre><code>XF86AudioMute
+XF86AudioRaiseVolume
+XF86AudioLowerVolume
+XF86AudioPlay
+XF86AudioPrev
+XF86AudioNext
+XF86WWW
+XF86Calculator
+XF86Mail
+</code></pre>
+<h5><a href="#Геометрия_окон" name="Геометрия_окон" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Геометрия окон</h5>
+<pre><code>X      - для размещения в направлении X
+Y      - для размещения в направлении Y
+WIDTH  - по ширине окна
+HEIGHT - по высоте окна
+:horz  - для горизонтального тайлинга
+:vert  - для вертикального тайлинга
+</code></pre>
+<h5><a href="#Примеры_геометрии" name="Примеры_геометрии" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Примеры геометрии</h5>
+<pre><code>gravity :c_a1,      [  33,  33,  34,  34 ]
+gravity :c_a2,      [  25,  25,  50,  50 ], :vert
+gravity :c_a3,      [   0,   0, 100, 100 ]
+
+gravity :c_b1,      [   0,  33, 100,  34 ]
+gravity :c_b2,      [  33,   0,  34, 100 ], :horz
+</code></pre>
+<h5><a href="#Пример_захвата_гравитаций" name="Пример_захвата_гравитаций" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Пример захвата гравитаций</h5>
+<pre><code>grab &quot;W-KP_5&quot;,      [ :c_a1,  :c_a2,  :c_a3,  :c_b1,  :c_b2         ]
+</code></pre>
+<h5><a href="#Маркировка_метками" name="Маркировка_метками" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Маркировка метками</h5>
+<pre><code>Borderless - Это свойство позволяет безграничный режим для маркированных клиентов
+Center     - Это свойство позволяет центрированный режим для маркированных клиентов
+Fixed      - Это свойство позволяет фиксированный режим для маркированных клиентов
+Float      - Это свойство позволяет свободный режим для маркированных клиентов
+Full       - Это свойство позволяет полный экран для маркированных клиентов
+Geometry   -
+Gravity    - Это свойство задает определенную гравитацию к маркированому клиенту, но только на соответствующих рабочих столов
+Match      - Это свойство добавляет matcher к тегу
+on_match   -
+position   -
+resize     -
+stick      -
+type       -
+urgent     -
+zaphod     -
+</code></pre>
+<h5><a href="#Типы_определения_приложений" name="Типы_определения_приложений" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Типы определения приложений</h5>
+<pre><code>:name     - Сопоставление имени окна
+:instance - Сопоставление имени инстанции окна
+:class    - Сопоставление имени класса окна
+:role     - Сопоставление роли окна
+:type     - Сопоставление типа окна
+</code></pre>
+<h5><a href="#This_property_sets_the_tagged_client_to_be_treated_as_a_specific_window_type_though_as_the_window_sets_the_type_itself" name="This_property_sets_the_tagged_client_to_be_treated_as_a_specific_window_type_though_as_the_window_sets_the_type_itself" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;This property sets the tagged client to be treated as a specific window type though as the window sets the type itself</h5>
+<pre><code>:normal  - Treat as normal window
+:desktop - Treat as desktop window
+:dock    - Treat as dock window
+:toolbar - Treat as toolbar windows
+:splash  - Treat as splash window
+:dialog  - Treat as dialog window
+</code></pre>
+<h5><a href="#Рабочие_столы" name="Рабочие_столы" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Рабочие столы</h5>
+<pre><code>match     -
+gravity   -
+icon      -
+icon_only -
+dynamic   -
+</code></pre>
+<h5><a href="#Пример_автоматического_старта_приложения" name="Пример_автоматического_старта_приложения" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Пример автоматического старта приложения</h5>
+<pre><code>on :start do
+  Subtlext::Client.spawn &quot;app&quot;
+end
+</code></pre>
+<p><em>Last Update: Sun Mar 06 2016 17:34:31 GMT+0300 (MSK)</em>  <a href="/raw/Subtle.md">Source File</a></p>
+</div>
+<div class="row">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <div class="footer-text">
+        <p>
+            KronoZ&#39;s wiki using <a href="https://github.com/phoenixlzx/MinoriWiki" target="_blank">MinoriWiki</a>
+        </p>
+    </div>
+</div>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
