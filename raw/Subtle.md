@@ -38,8 +38,8 @@ inactive   - Цвет неактивного клиента
 panel      - Цвет панели
 separator  - Цвет сепаратора
 stripple   - This property sets the color of the panel stippling if any
-width      - This property sets the string length in character, default is 50 characters
-min_width  - This property sets the min. pixel width of a panel item
+width      - Это свойство определяет длину строки в символе, по умолчанию 50 символов
+min_width  - Это свойство устанавливает минимальную ширину пикселя элемента панели
 ```
 
 ##### Кнопки мыши
@@ -54,11 +54,11 @@ B5 = Button5 (Колесо мыши вниз)
 ##### Специальные клавиши-модификаторы:
 ```
 [*A*] = левый Alt (Mod1)
-[*C*] = Control key
-[*M*] = Meta key (Mod3)
-[*S*] = Shift key
-[*W*] = Super/Windows key (Mod4)
-[*G*] = AltGr key (Mod5)
+[*C*] = Control клавиша
+[*M*] = Meta клавиша (Mod3)
+[*S*] = Shift клавиша
+[*W*] = Super/Windows клавиша (Mod4)
+[*G*] = AltGr клавиша (Mod5)
 ```
 
 ##### Общие клавиши
