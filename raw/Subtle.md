@@ -98,20 +98,9 @@ HEIGHT - по высоте окна
 :vert  - для вертикального тайлинга
 ```
 
-##### Примеры геометрии
-```
-gravity :c_a1,      [  33,  33,  34,  34 ]
-gravity :c_a2,      [  25,  25,  50,  50 ], :vert
-gravity :c_a3,      [   0,   0, 100, 100 ]
+[Готовый пример геометрии](https://gist.github.com/KronoZed/0b92e9a3361a623f9a73#file-gravities-rb)
 
-gravity :c_b1,      [   0,  33, 100,  34 ]
-gravity :c_b2,      [  33,   0,  34, 100 ], :horz
-```
-
-##### Пример захвата гравитаций
-```
-grab "W-KP_5",      [ :c_a1,  :c_a2,  :c_a3,  :c_b1,  :c_b2         ]
-```
+[Готовый пример захвата гравитаций](https://gist.github.com/KronoZed/0b92e9a3361a623f9a73#file-grabs-rb)
 
 ##### Маркировка метками (tag)
 ```
