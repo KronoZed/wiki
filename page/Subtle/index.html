@@ -167,14 +167,14 @@ gravity :c_b2,      [  33,   0,  34, 100 ], :horz
 <h5><a href="#Пример_захвата_гравитаций" name="Пример_захвата_гравитаций" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Пример захвата гравитаций</h5>
 <pre><code>grab &quot;W-KP_5&quot;,      [ :c_a1,  :c_a2,  :c_a3,  :c_b1,  :c_b2         ]
 </code></pre>
-<h5><a href="#Маркировка_метками" name="Маркировка_метками" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Маркировка метками</h5>
+<h5><a href="#Маркировка_метками_(tag)" name="Маркировка_метками_(tag)" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Маркировка метками (tag)</h5>
 <pre><code>Borderless - Это свойство позволяет безграничный режим для маркированных клиентов
 Center     - Это свойство позволяет центрированный режим для маркированных клиентов
 Fixed      - Это свойство позволяет фиксированный режим для маркированных клиентов
 Float      - Это свойство позволяет свободный режим для маркированных клиентов
 Full       - Это свойство позволяет полный экран для маркированных клиентов
 Geometry   -
-Gravity    - Это свойство задает определенную гравитацию к маркированому клиенту, но только на соответствующих рабочих столов
+Gravity    - Это свойство задает определенную гравитацию к маркированому клиенту, но только на соответствующих рабочих столах
 Match      - Это свойство добавляет matcher к тегу
 on_match   -
 position   -
@@ -184,20 +184,20 @@ type       -
 urgent     -
 zaphod     -
 </code></pre>
-<h5><a href="#Типы_определения_приложений" name="Типы_определения_приложений" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Типы определения приложений</h5>
+<h5><a href="#Типы_определения_приложений_(match)" name="Типы_определения_приложений_(match)" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Типы определения приложений (match)</h5>
 <pre><code>:name     - Сопоставление имени окна
 :instance - Сопоставление имени инстанции окна
 :class    - Сопоставление имени класса окна
 :role     - Сопоставление роли окна
 :type     - Сопоставление типа окна
 </code></pre>
-<h5><a href="#This_property_sets_the_tagged_client_to_be_treated_as_a_specific_window_type_though_as_the_window_sets_the_type_itself" name="This_property_sets_the_tagged_client_to_be_treated_as_a_specific_window_type_though_as_the_window_sets_the_type_itself" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;This property sets the tagged client to be treated as a specific window type though as the window sets the type itself</h5>
-<pre><code>:normal  - Treat as normal window
-:desktop - Treat as desktop window
-:dock    - Treat as dock window
-:toolbar - Treat as toolbar windows
-:splash  - Treat as splash window
-:dialog  - Treat as dialog window
+<h5><a href="#Это_свойство_устанавливает_меченого_клиента,_который_должен_рассматриваться_в_качестве_конкретного_типа_окна,_хотя,_как_окно_устанавливает_тип_самостоятельно_(type)" name="Это_свойство_устанавливает_меченого_клиента,_который_должен_рассматриваться_в_качестве_конкретного_типа_окна,_хотя,_как_окно_устанавливает_тип_самостоятельно_(type)" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Это свойство устанавливает меченого клиента, который должен рассматриваться в качестве конкретного типа окна, хотя, как окно устанавливает тип самостоятельно (type)</h5>
+<pre><code>:normal  - Рассматривать как обычное окно
+:desktop - Рассматривать как окно рабочего стола
+:dock    - Рассматривать как плавающее окно
+:toolbar - Рассматривать как окна панели инструментов
+:splash  - Рассматривать как заставочное окно
+:dialog  - Рассматривать как диалоговое окно
 </code></pre>
 <h5><a href="#Свойства_рабочих_столов_(views)" name="Свойства_рабочих_столов_(views)" target="_self" class="anchor"><span class="header-link">#</span></a>&nbsp;Свойства рабочих столов (views)</h5>
 <pre><code>match     - Это свойство работает как простой поиск тегов
@@ -210,7 +210,7 @@ dynamic   - Это свойство скрывает рабочие столы, 
   Subtlext::Client.spawn &quot;app&quot;
 end
 </code></pre>
-<p><em>Last Update: Mon Mar 07 2016 21:49:10 GMT+0300 (MSK)</em>  <a href="/raw/Subtle.md">Source File</a></p>
+<p><em>Last Update: Mon Mar 07 2016 23:24:54 GMT+0300 (MSK)</em>  <a href="/raw/Subtle.md">Source File</a></p>
 </div>
 <div class="row">
 </div>
