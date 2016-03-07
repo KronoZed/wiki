@@ -17,12 +17,7 @@ category: Связанное с десктопом
 icon       - Показывать иконку между элементами
 ```
 
-##### Готовый пример панели:
-```
-screen 1 do
-  top     [ :views, :separator, :title, :spacer, :tray, :seperator, :clock2 ]
-end
-```
+[Готовый пример панелей](https://gist.github.com/KronoZed/0b92e9a3361a623f9a73#file-panels-rb)
 
 ##### Эти свойства доступны для большинства стилей:
 ```
