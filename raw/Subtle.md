@@ -121,6 +121,8 @@ urgent     -
 zaphod     -
 ```
 
+[Готовый пример меток](https://gist.github.com/KronoZed/0b92e9a3361a623f9a73#file-tags-rb)
+
 ##### Типы определения приложений (match)
 ```
 :name     - Сопоставление имени окна
